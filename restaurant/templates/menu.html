@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Our Menu - Little Lemon Web Application{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <h1 class="text-3xl font-serif font-bold text-lemonGreen text-center">Visual Menu</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl border border-gray-100 p-4 space-y-2 shadow-sm">
+            <h3 class="font-bold text-lg text-lemonGreen">Greek Salad</h3>
+            <p class="text-xs text-gray-500">Fresh tomatoes, cucumbers, olives, and feta.</p>
+            <div class="text-sm font-bold text-lemonGreen">$10.50</div>
+        </div>
+        <div class="bg-white rounded-xl border border-gray-100 p-4 space-y-2 shadow-sm">
+            <h3 class="font-bold text-lg text-lemonGreen">Bruschetta</h3>
+            <p class="text-xs text-gray-500">Grilled bread with garlic, tomatoes, and basil.</p>
+            <div class="text-sm font-bold text-lemonGreen">$8.00</div>
+        </div>
+        <div class="bg-white rounded-xl border border-gray-100 p-4 space-y-2 shadow-sm">
+            <h3 class="font-bold text-lg text-lemonGreen">Lemon Herb Chicken</h3>
+            <p class="text-xs text-gray-500">Grilled chicken marinated in fresh lemon and herbs.</p>
+            <div class="text-sm font-bold text-lemonGreen">$14.99</div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Little Lemon Web Application{% endblock %}</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lemonYellow: '#F4C430',
+                        lemonGreen: '#495E57',
+                        lemonDark: '#333333',
+                        lemonLight: '#EDEFEE',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-lemonLight flex flex-col min-h-screen text-lemonDark">
+
+    <header class="bg-lemonGreen shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="{% url 'home' %}" class="flex items-center gap-3">
+                    <div class="bg-lemonYellow p-2 rounded-full w-11 h-11 flex items-center justify-center font-bold text-lemonGreen text-xl shadow">🍋</div>
+                    <span class="text-lemonYellow font-serif text-2xl font-extrabold tracking-wide">Little Lemon</span>
+                </a>
+                <nav class="flex space-x-6 text-base font-semibold">
+                    <a href="{% url 'home' %}" class="text-white hover:text-lemonYellow transition">Home</a>
+                    <a href="{% url 'about' %}" class="text-white hover:text-lemonYellow transition">About</a>
+                    <a href="{% url 'book' %}" class="text-white hover:text-lemonYellow transition">Book Table</a>
+                    <a href="{% url 'menu' %}" class="text-white hover:text-lemonYellow transition">Menu</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-4xl w-full mx-auto px-4 py-8">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="bg-lemonDark text-lemonLight py-6 border-t border-lemonYellow text-center text-xs">
+        <p>&copy; 2026 Little Lemon Web Application. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
